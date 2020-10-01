@@ -30,5 +30,10 @@ public class AddressBook {
         addressBook.addBuddy(buddyInfo);
         addressBook.removeBuddy(0);
         System.out.println("Testing New Changes");
+        System.out.println("push your changes after committing");
+        System.out.println("Another Change");
+
+
+
     }
 }
