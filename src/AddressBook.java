@@ -21,6 +21,9 @@ public class AddressBook {
         }
         return null;
     }
+    public void printStatment(){
+        System.out.println("Another Change");
+    }
 
 
     public static void main(String[] args) {
@@ -31,8 +34,6 @@ public class AddressBook {
         addressBook.removeBuddy(0);
         System.out.println("Testing New Changes");
         System.out.println("push your changes after committing");
-        System.out.println("Another Change");
-        System.out.println("Wrote it on Github");
-
+        addressBook.printStatment();
     }
 }
