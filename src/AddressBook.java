@@ -10,19 +10,25 @@ public class AddressBook {
     }
 
     public void addBuddy(BuddyInfo buddyInfo){
-        this.buddyInfoList.add(buddyInfo);
+        if(buddyInfo !=null) {
+            this.buddyInfoList.add(buddyInfo);
+        }
     }
 
-    public void removeBuddy(BuddyInfo buddyInfo){
-        this.buddyInfoList.remove(buddyInfo);
+    public BuddyInfo removeBuddy(int index){
+        if( index >= 0 && index < buddyInfoList.size()) {
+            return this.buddyInfoList.remove(index);
+        }
+        return null;
     }
 
 
     public static void main(String[] args) {
-    System.out.println("Address Book");
-    BuddyInfo buddyInfo = new BuddyInfo("Joe","Carleton",613);
-    AddressBook addressBook = new AddressBook();
-    addressBook.addBuddy(buddyInfo);
-    addressBook.removeBuddy(buddyInfo);
+        System.out.println("Address Book");
+        BuddyInfo buddyInfo = new BuddyInfo("Joe","Carleton",613);
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddyInfo);
+        addressBook.removeBuddy(0);
+        System.out.println("Testing New Changes");
     }
 }
